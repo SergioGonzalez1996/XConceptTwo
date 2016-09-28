@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5AD8FAAD-CD41-4DCE-ADFB-C96F7EDF4D73}</ProjectGuid>
+    <ProjectGuid>{E61F1A4F-A0CB-4B9E-AEA3-8C4964DB2054}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>XConceptTwo.iOS</RootNamespace>
@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <None Include="app.config" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,7 +117,31 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Branch-Xamarin-Lib.iOS, Version=1.0.6022.35640, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Branch-Xamarin-Linking-SDK.2.1.6\lib\Xamarin.iOS10\Branch-Xamarin-Lib.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Branch-Xamarin-SDK, Version=1.0.6022.35639, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Branch-Xamarin-Linking-SDK.2.1.6\lib\Xamarin.iOS10\Branch-Xamarin-SDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Branch-Xamarin-SDK.iOS, Version=1.0.6022.35640, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Branch-Xamarin-Linking-SDK.2.1.6\lib\Xamarin.iOS10\Branch-Xamarin-SDK.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -139,7 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XConceptTwo\XConceptTwo.csproj">
-      <Project>{C25BB792-D049-4EC7-94F2-44B67EABC1F3}</Project>
+      <Project>{BBD50E12-25B0-475B-89E0-C976192B7EFD}</Project>
       <Name>XConceptTwo</Name>
     </ProjectReference>
   </ItemGroup>
@@ -150,5 +175,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
   </Target>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
 </Project>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{894A4068-9811-46C1-8FF4-90A2419EF8CF}</ProjectGuid>
+    <ProjectGuid>{23B0F2AE-57E5-4C41-B073-2EFEB043B3BE}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XConceptTwo.UWP</RootNamespace>
@@ -129,7 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XConceptTwo\XConceptTwo.csproj">
-      <Project>{C25BB792-D049-4EC7-94F2-44B67EABC1F3}</Project>
+      <Project>{BBD50E12-25B0-475B-89E0-C976192B7EFD}</Project>
       <Name>XConceptTwo</Name>
     </ProjectReference>
   </ItemGroup>
